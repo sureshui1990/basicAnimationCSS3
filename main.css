@@ -172,3 +172,108 @@ p{
         transform: scale(3) rotate(-45deg);
     }
 }
+
+
+/* Text Clip animation style Start */
+.text-clip-body{
+    background-color: #111;
+}
+.text-clip-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.text-clip-container h1{
+    margin-top: 1.5em;
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgba(255,255,255,.2);
+    background-image: url("./images//glow.jpg");
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: TextAnimate 2s linear infinite;
+}
+@keyframes TextAnimate{
+    0%{
+        background-position: left 0px top 30px;
+    }
+    100%{
+        background-position: left 850px top 30px;
+    }
+}
+/* Text Clip animation style End */
+
+
+/* Text Plink animation style Start */
+
+.text-plink-body{
+    background-color: #111;
+}
+.text-plink-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.text-plink-container h1{
+    margin-top: 1.5em;
+    display: flex;
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgba(255,255,255,.2);
+}
+.text-plink-container h1 span{  
+    animation: eachTextGlow 2.25s linear infinite;
+}
+.text-plink-container h1 span:nth-child(1){
+    animation-delay: 0s;
+}
+.text-plink-container h1 span:nth-child(2){
+    animation-delay: 0.25s;
+}
+.text-plink-container h1 span:nth-child(3){
+    animation-delay: 0.5s;
+}
+.text-plink-container h1 span:nth-child(4){
+    animation-delay: 0.75s;
+}
+.text-plink-container h1 span:nth-child(5){
+    animation-delay: 1s;
+}
+.text-plink-container h1 span:nth-child(6){
+    animation-delay: 1.25s;
+}
+.text-plink-container h1 span:nth-child(7){
+    animation-delay: 1.5s;
+}
+.text-plink-container h1 span:nth-child(8){
+    animation-delay: 1.75s;
+}
+.text-plink-container h1 span:nth-child(9){
+    animation-delay: 2s;
+}
+
+@keyframes eachTextGlow{
+    0%,100%{
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 60px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 100px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 140px #00b3ff,
+        0 0 160px #00b3ff
+    }
+    5%,95%{
+        color: #222;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+/* Text Plink animation style End */
+
